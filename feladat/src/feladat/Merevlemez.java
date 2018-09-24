@@ -7,7 +7,7 @@ package feladat;
 
 /**
  *
- * @author kelement
+ * @author Kelemen Tamás 1/14ED Merevlemez.java
  */
 public class Merevlemez extends Adathordozo{
     private int fordulatszam;
@@ -19,7 +19,7 @@ public class Merevlemez extends Adathordozo{
     
     @Override
     public String toString() {
-        return super.toString() + " " + fordulatszam;
+        return super.toString() + ", fordulatszám: " + fordulatszam;
     }
     
     
