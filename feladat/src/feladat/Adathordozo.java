@@ -7,11 +7,16 @@ package feladat;
 
 /**
  *
- * @author kelement
+ * @author Kelemen Tamás 1/14ED Adathordozo.java
  */
+
 public class Adathordozo {
-    String nev;
-    int kapacitas;
+    private String nev;
+    private int kapacitas;
+
+    public int getKapacitas() {
+        return kapacitas;
+    }
 
     public Adathordozo(String nev, int kapacitas) {
         this.nev = nev;
@@ -20,11 +25,11 @@ public class Adathordozo {
     
     @Override
     public String toString() {
-        return nev + " " + kapacitas;
+        return nev + ", kapacitás = " + kapacitas;
     }
     
-    public String nagyobbMint(Adathordozo adathordozo) {
-        return (this.kapacitas > adathordozo.kapacitas) ? "Nagyobb" : "Kisebb";
+    public boolean nagyobbMint(Adathordozo adathordozo) {
+        return (this.kapacitas > adathordozo.kapacitas) ? true : false;
     }
     
 }
