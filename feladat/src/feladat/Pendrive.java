@@ -7,7 +7,7 @@ package feladat;
 
 /**
  *
- * @author kelement
+ * @author Kelemen Tamás 1/14ED Pendrive.java
  */
 public class Pendrive extends Adathordozo {
     private int verzio;
@@ -19,7 +19,7 @@ public class Pendrive extends Adathordozo {
     
     @Override
     public String toString() {
-        return super.toString() + " " + verzio;
+        return super.toString() + ", szabvány verzió: " + verzio;
     }
     
     
