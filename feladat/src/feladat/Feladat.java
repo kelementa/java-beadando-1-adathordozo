@@ -18,6 +18,7 @@ public class Feladat {
     
     static void feltoltes() {
         // tömb feltöltése
+        System.out.println("tömbök feltöltése...");
         adathordozo.add(new Merevlemez(1000, 5400));
         adathordozo.add(new Merevlemez(500, 7200));
         adathordozo.add(new Pendrive(32, 2));
@@ -31,6 +32,7 @@ public class Feladat {
     
     static void listazas() {
         // tömb tartalmának kirása
+        System.out.println("tömbök listázása: ");
         for (int i = 0; i < adathordozo.size(); i++) {
             System.out.println(adathordozo.get(i).toString());
         }
@@ -43,9 +45,10 @@ public class Feladat {
     
     static void legnagyobb() {
         // a legnagyobb adathordozó meghatározása
+        System.out.println("a legnagyobb méretű elem: ");
         int legnagyobb = 0;
         for (int i = 0; i < adathordozo.size(); i++) {
-            if (adathordozo.get(i).getKapacitas() > legnagyobb) {
+            if (adathordozo.get(i).getKapacitas() > adathordozo.get(legnagyobb).getKapacitas()) {
                 System.out.println(adathordozo.get(i).getKapacitas());
                 legnagyobb = i;
                 System.out.println(legnagyobb);
@@ -55,7 +58,7 @@ public class Feladat {
         
         int max = 0;
         for (int i = 0; i < adathordozo2.length; i++) {
-            if (adathordozo2[i].getKapacitas() > max) {
+            if (adathordozo2[i].getKapacitas() > adathordozo2[max].getKapacitas()) {
                 System.out.println(adathordozo2[i].getKapacitas());
                 max = i;
                 System.out.println(max);
@@ -66,10 +69,16 @@ public class Feladat {
     
     static void csakPendrive() {
         // csak a pendrive-ok listázása
-        System.out.println("Pendrive-ok: ");
+        System.out.println("csak a pendriveok listázása: ");
         for (int i = 0; i < adathordozo.size(); i++) {
             if (adathordozo.get(i) instanceof Pendrive) {
                 System.out.println(adathordozo.get(i).toString());
+            }
+        }
+        
+        for (int i = 0; i < adathordozo2.length; i++) {
+            if (adathordozo2[i] instanceof Pendrive) {
+                System.out.println(adathordozo2[i].toString());
             }
         }
     }
